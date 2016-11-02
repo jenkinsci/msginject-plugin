@@ -1,0 +1,28 @@
+<div>
+    <p>Used to inject a message into the Gerrit Trigger plugin's build summary
+    comment at the end of all builds.</p>
+
+    <p>One example for this feature is to use it to return the log location of
+    a build in cases where logs and / or archives are shipped off of
+    Jenkins to another service elsewhere.</p>
+
+    <p>
+    <b>Example Message:</b>
+
+        <pre>
+        Logs: https://logs.example.org/jenkins/jenkins001/$JOB_NAME/$BUILD_NUMBER
+        </pre>
+    </p>
+
+    <p>
+    <b>Example Result:</b>
+    <pre>
+        Patch Set 1: Verified+1
+        Build Unstable
+        https://ci.example.org/jenkins/job/example-job-a/123/ : UNSTABLE
+        Logs: https://logs.example.org/jenkins/jenkins001/exampe-job-a/123
+        https://ci.example.org/jenkins/job/example-job-b/456/ : SUCCESS
+        Logs: https://logs.example.org/jenkins/jenkins001/example-job-b/456
+    </pre>
+    </p>
+</div>
